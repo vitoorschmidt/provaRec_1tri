@@ -4,12 +4,12 @@
     // Faça um script que leia o custo de fábrica da camisa e calcule os custos adicionais, apresentando o custo final da camisa ao comprador.
 
     //ENTRADA
-
+    const precoFabrica = Number(prompt(`Insira o preço de custo de fábrica da camisa`).trim());
     
     //PROCESSAMENTO
-
+    precoFinal = precoFabrica + (precoFabrica*20/100) + (precoFabrica*35/100)
 
     //SAÍDA
-
+    alert(`O custo final da camisa com todos os adicionais é de R$${precoFinal} reais`)
 
 </script>

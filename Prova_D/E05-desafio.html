@@ -2,18 +2,24 @@
     /*
     PROBLEMA
     Considere o seguinte cenário:
-    Uma loja de carros usados paga aos vendedores um salário fixo por mês, além de comissão para cada carro vendido, no valor de R$ 300,00. Também, sobre o valor total vendido, o funcionário receberá outros 5% de comissão.
+    Uma loja de carros usados paga aos vendedores um salário fixo por mês, além de comissão para cada carro vendido, no valor de R$ 300,00. Também, sobre o valor total vendido, 
+    o funcionário receberá outros 5% de comissão.
     Faça um script que receba o salário fixo pago por mês, a quantidade de carros vendidos, e também o valor total dos carros vendidos pelo funcionário.
     Calcule e escreva o salário final do vendedor, aplicando desconto de 27%, referente ao imposto de renda.
     */
 
     //ENTRADA
-
+    const salarioFixo = Number(prompt(`Insira o seu salário fixo em reais`).trim());
+    const carrosVendidos = Number(prompt(`Insira a quantidade de carros que você vendeu neste mês`).trim());
 
     //PROCESSAMENTO
+    const comissao = carrosVendidos * 300
+    const salario1 = salarioFixo + comissao
+    const salario2 = salario1+ (salario1*5/100)
 
-
+    const salarioFinal= salario2 - (salario2*27/100)
+    
     //SAÍDA
-
+    alert(`O salário final do vendedor será de R$${salarioFinal.toFixed(2)} reais.`)
 
 </script>
